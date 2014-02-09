@@ -1,6 +1,6 @@
 {
   "name": "temere",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Predictable random generator useful for UUID's, PIN's, and other such things.",
   "main": "index.js",
   "scripts": {
