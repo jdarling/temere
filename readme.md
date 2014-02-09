@@ -30,6 +30,14 @@ console.log(t.next());
 
 // You can also set some options
 t = new T({seed: 'foobar', length: 10, chars: 'aAbCdE356'});
+
+// To generate a pin that follows nnn-nnn-nnnn where n is a character
+t = new T();
+var pin = t.next().toUpperCase().replace(/(.{3})(.{3})(.{4})/, function(m, m1, m2, m3){
+  return m1+'-'+m2+'-'+m3;
+});
+console.log(pin);
+
 ```
 
 Testing
