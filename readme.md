@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/jdarling/temere.svg?branch=master)](https://travis-ci.org/jdarling/temere)
+
 Temere
 =====
 
@@ -57,23 +59,23 @@ Really everything you need to know is above.  If your curious this is an impleme
 In short:
 
 ```
-function Random : real; 
-(* Integer Version 2 *) 
-const 
-  a = 16807; 
-  m = 2147483647; 
-  q = 127773; (* m div a *) 
-  r = 2836; (* m mod a *) 
-var 
-  lo, hi, test : integer; 
-begin 
-  hi := seed div q; 
-  lo := seed mod q; 
-  test := a * lo - r * hi; 
-  if test > 0 then 
-    seed := test 
-  else 
-    seed := test + m; 
+function Random : real;
+(* Integer Version 2 *)
+const
+  a = 16807;
+  m = 2147483647;
+  q = 127773; (* m div a *)
+  r = 2836; (* m mod a *)
+var
+  lo, hi, test : integer;
+begin
+  hi := seed div q;
+  lo := seed mod q;
+  test := a * lo - r * hi;
+  if test > 0 then
+    seed := test
+  else
+    seed := test + m;
   Random := seed / m;
 end;
 ```
